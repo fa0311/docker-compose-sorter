@@ -4,4 +4,4 @@ COPY package.json pnpm-lock.yaml* ./
 RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile || pnpm install
 COPY src ./src
-RUN pnpm run start
+ENTRYPOINT ["pnpm", "run", "start"]

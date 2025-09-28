@@ -1,0 +1,43 @@
+{
+  "name": "docker-compose-sorter",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Minimal CLI to sort docker-compose YAML files (services, keys, environment) using modern TypeScript tooling.",
+  "bin": {
+    "docker-compose-sorter": "dist/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "format": "biome format .",
+    "lint": "biome lint .",
+    "lint:fix": "biome check --apply .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "docker",
+    "compose",
+    "sort",
+    "yaml",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "",
+  "dependencies": {
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^24.5.2",
+    "@types/yaml": "^1.9.7",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
